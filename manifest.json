@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "CPA テストサイト レイアウト調整ツール",
+  "version": "0.1.0",
+  "description": "CPA のテストページを見やすく変更",
+  "icons": {
+    "128": "img/128.png",
+    "48": "img/48.png",
+    "16": "img/16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://exam.abitus.co.jp/tbs_mc_test/question/main.php*"
+      ],
+      "all_frames": true,
+      "js": [
+        "js/frameset.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://exam.abitus.co.jp/tbs_mc_test/question/question.php*"
+      ],
+      "all_frames": true,
+      "js": [
+        "js/exhibits.js"
+      ]
+    }
+  ]
+}
